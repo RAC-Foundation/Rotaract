@@ -9,26 +9,80 @@
 
 <body>
 
+<style>
+      body {
+        overflow-x: hidden;
+      }
 
-<nav class="navbar navbar-expand-lg px-4" style="background-color:#5E1219;">
+      /* NAVBAR FIX */
+      .active-nav {
+        position: relative;
+        font-weight: 600;
+      }
+
+      .active-nav::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 2px;
+        background: white;
+      }
+
+      .nav-hover {
+        position: relative;
+      }
+
+      .nav-hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 2px;
+        background: white;
+        transition: 0.3s;
+      }
+
+      .nav-hover:hover::after {
+        width: 100%;
+      }
+
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
+    </style>
+</head>
+
+<nav class="navbar navbar-expand-lg px-4" style="background-color: #c40000;">
   <div class="container-fluid">
-     <a class="navbar-brand fw-bold" href="index.html" style="color:white;">Rotaract</a> 
 
-    <div class="collapse navbar-collapse justify-content-end">
-      <div class="navbar-nav align-items-center">
-        <a class="nav-link text-white">Home</a>
-        <a class="nav-link text-white" href="pengurus.html">Pengurus</a>
-        <a class="nav-link active text-white text-primary border-bottom border-2 border-light" href="service.html">Services</a>
-        <a class="nav-link text-white" href="portfolio.html">Portfolio</a>
-        <a class="nav-link text-white" href="contact.html">Contact</a>
-        <li class="nav-item" style="padding: 2px; margin-right : 20px;">
-          <button type="button" class="btn btn-light">Let's Talk</button>
-        </li>
-        <!-- <a class="btn ms-3 text-white" style="background-color: rgb(18,18,59);">Let's Talk</a> -->
+    <a class="navbar-brand fw-bold text-white" href="#">Rotaract</a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <div class="navbar-nav align-items-center gap-4">
+
+        <a class="nav-link text-white active-nav" href="#">Home</a>
+        <a class="nav-link text-white nav-hover" href="#">Pengurus</a>
+        <a class="nav-link text-white nav-hover" href="#">Services</a>
+        <a class="nav-link text-white nav-hover" href="#">Activity</a>
+        <a class="nav-link text-white nav-hover" href="#">Contact</a>
+
+        <a href="#" class="btn btn-light rounded-3 px-3 fw-semibold ms-3">
+          Let's Talk
+        </a>
+
       </div>
     </div>
+
   </div>
 </nav>
+
 
     <div class="container mt-5 pt-4 mb-5">
         <div class="row align-items-center">
@@ -101,7 +155,7 @@
         </div>
     </div>
 
-    <div class="text-white text-center py-5" style="background-color:#5E1219">
+    <div class="text-white text-center py-5" style="background-color:#c40000">
         <div class="container my-3">
             <h2 class="font-weight-bold">Ready to Become a Leader?</h2>
             <p class="mb-4">Transform yourself while transforming your community</p>
@@ -166,21 +220,18 @@
         </div>
     </div>
 
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                    <small>&copy; 2026 Tugas Pemrograman Web. All rights reserved.</small>
-                </div>
-                <div class="col-md-6 text-center text-md-right">
-                    <a href="#" class="text-white mx-2 small">Facebook</a>
-                    <a href="#" class="text-white mx-2 small">Twitter</a>
-                    <a href="#" class="text-white mx-2 small">Instagram</a>
-                    <a href="#" class="text-white mx-2 small">LinkedIn</a>
-                </div>
-            </div>
+    <footer class="bg-light py-4 border-top"> 
+  <div class="container"> 
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center"> 
+      <div class="text-secondary mb-3 mb-md-0"> Copyright © 2026 <span class="fw-bold text-dark">Rotaract landing page.</span> </div>
+       <div class="d-flex gap-3"> <a href="https://www.facebook.com/rotary?locale=id_ID" class="text-secondary fs-5"><i class="bi bi-facebook"></i></a> 
+        <a href="https://www.instagram.com/rac.universitasmachung?igsh=MTRzd3p6OXVuemdkZw==" class="text-secondary fs-5"><i class="bi bi-instagram"></i></a>
+         <a href="https://www.linkedin.com/company/rotaract-international/" class="text-secondary fs-5"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.youtube.com/@rotaractclubofuniversitasm9093" class="text-secondary fs-5"><i class="bi bi-youtube"></i></a>
+         </div> 
         </div>
-    </footer>
+      </div>
+ </footer>
 
 </body>
 </html>

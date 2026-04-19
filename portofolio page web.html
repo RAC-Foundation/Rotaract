@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>pengurus page</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    section {
+      padding: 80px 0;
+    }
+
+    .card img {
+      height: 240px;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+      border-bottom: 1px solid #eee;
+    }
+    
+
+    .img-bendahara {
+      height: 240px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center !important; 
+    }
+
+    .img-divisi {
+      width: 100% !important;
+      height: auto !important;
+      max-height: 450px !important;
+      object-fit: contain !important; 
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .logo-navbar {
+      height: 40px;
+    }
+
+    .modal-backdrop.show {
+      backdrop-filter: blur(5px);
+    }
+
+    .active-nav {
+        position: relative;
+        font-weight: 600;
+      }
+
+      .active-nav::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 2px;
+        background: white;
+      }
+
+      .nav-hover {
+        position: relative;
+      }
+
+      .nav-hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 2px;
+        background: white;
+        transition: 0.3s;
+      }
+
+      .nav-hover:hover::after {
+        width: 100%;
+      }
+
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
+  </style>
+</head>
+
+<body>
+
+<!-- 🔝 NAVBAR -->
+<nav class="navbar navbar-expand-lg px-4" style="background-color: #c40000;">
+  <div class="container-fluid">
+
+    <a class="navbar-brand fw-bold text-white" href="#">Rotaract</a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <div class="navbar-nav align-items-center gap-4">
+
+        <a class="nav-link text-white nav-hover" href="index.html">Home</a>
+        <a class="nav-link text-white active-nav" href="pengurus.html">Pengurus</a>
+        <a class="nav-link text-white nav-hover" href="service.html">Services</a>
+        <a class="nav-link text-white nav-hover" href="activity.html">Activity</a>
+        <a class="nav-link text-white nav-hover" href="contact.html">Contact</a>
+
+        <a href="#" class="btn btn-light rounded-3 px-3 fw-semibold ms-3">
+          Let's Talk
+        </a>
+    </div>
+  </div>
+</nav>
+
+<!-- 👥 PENGURUS -->
+<section id="pengurus" class="text-center">
+  <div class="container">
+
+    <h2 class="fw-bold">Our Leadership</h2>
+    <p class="text-muted">Struktur inti UKM Roktarat</p>
+
+    <div class="row mt-4 justify-content-center">
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card shadow-sm">
+          <img src="ketua.jpeg">
+          <div class="card-body">
+            <h5>Ketua UKM</h5>
+            <p class="text-muted">Bobby miracle hardiansyah </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card shadow-sm">
+          <img src="sekretaris.jpeg">
+          <div class="card-body">
+            <h5>Sekretaris </h5>
+            <p class="text-muted">Samuel Delon Kurniawan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card shadow-sm">
+          <img src="bendahara.jpeg" class="img-bendahara">
+          <div class="card-body">
+            <h5>Bendahara</h5>
+            <p class="text-muted">Aaron Sanyu Lunanta</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🧩 DIVISI -->
+<section id="divisi" class="bg-light text-center">
+  <div class="container">
+
+    <h2 class="fw-bold">Smile 5.0</h2>
+    <p class="text-muted">Bagian dalam UKM</p>
+
+    <div class="row mt-4 justify-content-center">
+
+      <!-- ACARA -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="acara.png" class="img-divisi">
+          <div class="card-body">
+            <h5>Acara</h5>
+            <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalAcara">
+              Lihat Anggota
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- AKPER -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="akper.png" class="img-divisi">
+          <div class="card-body">
+            <h5>Akper</h5>
+            <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalAkper">
+              Lihat Anggota
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DANA -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="dana.png" class="img-divisi">
+          <div class="card-body">
+            <h5>Dana</h5>
+            <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalDana">
+              Lihat Anggota
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PUBLIKASI -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="pubdekdok.png" class="img-divisi">
+          <div class="card-body">
+            <h5>Publikasi</h5>
+            <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalPublikasi">
+              Lihat Anggota
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- KONSUMSI -->
+      <div class="col-md-4 mb-4 d-flex align-items-stretch">
+        <div class="card shadow-sm h-100 w-100">
+          <img src="konsum.png" class="img-divisi">
+          <div class="card-body ">
+            <h5>Konsumsi</h5>
+            <div class="mt-auto">
+            <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#modalKonsumsi">
+              Lihat Anggota
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODAL ACARA -->
+<div class="modal fade" id="modalAcara" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Divisi Acara</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Herbert</li>
+          <li>Albert</li>
+          <li>Fatma</li>
+          <li>Marcel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL AKPER -->
+<div class="modal fade" id="modalAkper" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Divisi Akper</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Juli </li>
+          <li>Ryan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DANA -->
+<div class="modal fade" id="modalDana" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Divisi Dana</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Yessy</li>
+          <li>Nofebri</li>
+          <li>Serly</li>
+          <li>Geo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL PUBLIKASI -->
+<div class="modal fade" id="modalPublikasi" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Divisi Publikasi</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Imam </li>
+          <li>Rizky</li>
+          <li>Ian </li>
+          <li>Richard</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL KONSUMSI -->
+<div class="modal fade" id="modalKonsumsi" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Divisi Konsumsi</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Riva satria</li>
+          <li>Abigail sherly</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<footer class="bg-light py-4 border-top"> 
+  <div class="container"> 
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center"> 
+      <div class="text-secondary mb-3 mb-md-0"> Copyright © 2026 <span class="fw-bold text-dark">Rotaract landing page.</span> </div>
+       <div class="d-flex gap-3"> <a href="https://www.facebook.com/rotary?locale=id_ID" class="text-secondary fs-5"><i class="bi bi-facebook"></i></a> 
+        <a href="https://www.instagram.com/rac.universitasmachung?igsh=MTRzd3p6OXVuemdkZw==" class="text-secondary fs-5"><i class="bi bi-instagram"></i></a>
+         <a href="https://www.linkedin.com/company/rotaract-international/" class="text-secondary fs-5"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.youtube.com/@rotaractclubofuniversitasm9093" class="text-secondary fs-5"><i class="bi bi-youtube"></i></a>
+         </div> 
+        </div>
+      </div>
+ </footer>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
